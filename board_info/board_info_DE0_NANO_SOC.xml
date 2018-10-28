@@ -58,6 +58,25 @@
 <val type="hex">0x7800000</val>
 </DTAppend>
 -->
+<!--
+Added by WZab
+-->
+<DTAppend name="cpu1-start-addr" type="hex" parentlabel="hps_0_sysmgr" val="0xffd080c4"/>
+<DTAppend name="compatible" type="string" parentlabel="hps_0_sysmgr" val="altr,sys-mgr"/>
+<DTAppend name="compatible" type="string" parentlabel="hps_0_sysmgr" val="syscon" action="add"/>
+<DTAppend name="compatible" type="string" parentlabel="hps_0_rstmgr" val="altr,rst-mgr"/>
+<DTAppend name="compatible" type="string" parentlabel="hps_0_rstmgr" val="syscon" action="add"/>
+<DTAppend name="#reset-cells" type="number" parentlabel="hps_0_rstmgr" val="1"/>
+<DTAppend name="altr,modrst-offset" type="hex" parentlabel="hps_0_rstmgr" val="0x10"/>
+<DTAppend name="altr,sysmgr-syscon" parentlabel="hps_0_gmac1">
+<val type="phandle">hps_0_sysmgr</val>
+<val type="hex">0x60</val>
+<val type="hex">0x02</val>
+</DTAppend>
+<!--
+Added by WZab
+-->
+
 
 <DTAppend name="phy-mode" type="string" parentlabel="hps_0_gmac1" val="rgmii"/>
 
